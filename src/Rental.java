@@ -1,4 +1,15 @@
-public class Rental {
+class Rental {
+    private Movie movie;
+    private int daysRented; // ← 這就是你在 getCharge 中要用的變數
+
+    public Rental(Movie movie, int daysRented) {
+        this.movie = movie;
+        this.daysRented = daysRented; // ← 將外部傳進來的天數存起來
+    }
+
+    public int getDaysRented() {
+        return daysRented;
+    }
 
     public double getCharge() {
         MovieType type = movie.getPriceCode();
@@ -13,7 +24,7 @@ public class Rental {
             }
         }
 
-    return charge;
+        return charge;
     }
 
     public double getFrequentRenterPoints() {
