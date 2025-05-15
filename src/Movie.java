@@ -7,22 +7,6 @@ public class Movie {
         this.type = type;
     }
 
-    public double getCharge(int daysRented) {
-        double base = type.getBasePrice();
-        int defaultDays = type.getDefaultDays();
-        double delayedPrice = type.getDelayedPrice();
-
-        if (daysRented <= defaultDays) {
-            return base;
-        } else {
-            return base + (daysRented - defaultDays) * delayedPrice;
-        }
-    }
-
-    public double getPoints() {
-        return type.getPoint();
-    }
-
     public String getName() {
         return name;
     }
@@ -31,8 +15,24 @@ public class Movie {
         return type;
     }
 
-    public void setType(MovieType newType) {
-        this.type = newType;
+    public void setType(MovieType type) {
+        this.type = type;
+    }
+
+    public double getPoint() {
+        return type.getPoint();
+    }
+
+    public double getBasePrice() {
+        return type.getBasePrice();
+    }
+
+    public int getDefaultDays() {
+        return type.getDefaultDays();
+    }
+
+    public double getDelayedPrice() {
+        return type.getDelayedPrice();
     }
 
     public MovieType getPriceCode() {
