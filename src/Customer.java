@@ -16,12 +16,12 @@ public class Customer {
 
     public void statement(){
         System.out.println(name);
-        float totalPoints = 0,
+        double totalPoints = 0,
                 totalSpend = 0;
         for(Rental r : this.rentalRecord){
             String movieName = r.getMovieName();
-            float price = r.getCost();
-            float points = r.getPoints();
+            double price = r.getCharge();
+            double points = r.getFrequentRenterPoints();
             totalSpend += price;
             totalPoints += points;
             System.out.printf("Movie name: %s, Price: %f, Points: %f\n", movieName, price, points);
@@ -31,7 +31,7 @@ public class Customer {
     }
 
     public void rent(Movie mv, int rentDays) {
-        Rental r = new Rental(mv, this, rentDays);
+        Rental r = new Rental(mv, rentDays);
 
         rentalRecord.add(r);
     }
