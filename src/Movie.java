@@ -34,4 +34,8 @@ public class Movie {
     public void setType(MovieType newType) {
         this.type = newType;
     }
+
+    public MovieType getPriceCode() {
+        return type;
+    }
 }
