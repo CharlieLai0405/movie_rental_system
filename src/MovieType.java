@@ -1,3 +1,5 @@
+package src;
+
 enum MovieType {
     NEW_RELEASE(3.0, 0, 0, 2.0),
     REGULAR(2.0, 2, 1.5, 1.0),
