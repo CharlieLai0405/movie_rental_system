@@ -7,7 +7,7 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public Movie getMovie() {
+    public Movie getMovieName() {
         return movie;
     }
 
