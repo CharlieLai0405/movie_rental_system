@@ -7,8 +7,8 @@ public class Rental {
         this.daysRented = daysRented;
     }
 
-    public Movie getMovieName() {
-        return movie;
+    public String getMovieName() {
+        return movie.getName();
     }
 
     public int getDaysRented() {
