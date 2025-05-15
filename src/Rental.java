@@ -1,10 +1,10 @@
 class Rental {
     private Movie movie;
-    private int daysRented; // ← 這就是你在 getCharge 中要用的變數
+    private int daysRented;
 
     public Rental(Movie movie, int daysRented) {
         this.movie = movie;
-        this.daysRented = daysRented; // ← 將外部傳進來的天數存起來
+        this.daysRented = daysRented;
     }
 
     public int getDaysRented() {
